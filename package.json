@@ -1,0 +1,25 @@
+{
+  "name": "apirest-tasks-firebase",
+  "version": "1.0.0",
+  "description": "Repositorio con un API Rest de tareas y autenticación de usuarios usando Firebase como base de datos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierJARA14/apirest-tasks-firebase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavierJARA14/apirest-tasks-firebase/issues"
+  },
+  "homepage": "https://github.com/JavierJARA14/apirest-tasks-firebase#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
