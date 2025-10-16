@@ -23,6 +23,7 @@ async function addTask(req, res) {
   try {
     if (!req.body.title) 
         return res.status(400).json({ message: "Title cannot be empty." });
+    req.body.completed = false;
     const newTask = await Task.addTask(req.body);
     res.status(201).json(newTask);
   } catch (error) {
@@ -32,8 +33,10 @@ async function addTask(req, res) {
 
 async function updateTask(req, res) {
   try {
+    const alreadyExists = await Task.findById(req.params.id);
+    if (!alreadyExists) return res.status(404).json({ message: "Cannot find task" })
     const updated = await Task.updateTask(req.params.id, req.body);
-    return updated ? res.status(200).json(updated) : res.status(404).json({ message: "Cannot find task" });
+    return res.status(200).json(updated);
   } catch (error) {
     res.status(500).json({message: "Cannot connect to database."});
   }

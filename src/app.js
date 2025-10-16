@@ -2,7 +2,7 @@ const express = require("express");
 require('dotenv').config();
 
 const taskRoutes = require("./routes/task.routes");
-//const authRoutes = require("./routes/auth.routes");
+const authRoutes = require("./routes/auth.routes");
 const app = express();
 
 app.use(express.json());
@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/tasks", taskRoutes);
-//app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

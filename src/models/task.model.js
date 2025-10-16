@@ -10,7 +10,7 @@ async function findAll() {
 
 async function findById(id) {
     const task = await collection.doc(id).get();
-    if(!task) return null;
+    if(task.empty) return null;
     return {id: task.id, ...task.data()};
 }
 
