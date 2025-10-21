@@ -70,7 +70,7 @@ src/
 | Campo    | Tipo   | Ejemplo                                                          |
 | :------- | :----- | :--------------------------------------------------------------- |
 | username | String | `"Javier Jara"`                                                  |
-| password | String | `"$2b$10$XoY4WsHDDkmlCdRrnW4uh.evDRUZHXePwWgKVtv587.7uZh6dLozC"` |
+| password | String | `"CONTRASEÑA ENCRIPTADA"` |
 
 ### Tarea
 
